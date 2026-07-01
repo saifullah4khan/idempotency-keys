@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "idempotency-keys"
+version = "0.1.0"
+description = "Framework-agnostic idempotency helper that runs an operation at most once per key."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Saifullah Khan", email = "saifullah4khan@gmail.com" }]
+keywords = ["idempotency", "retry", "deduplication", "redis", "reliability", "api"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7.0"]
+redis = ["redis>=4.0"]
+
+[project.urls]
+Homepage = "https://github.com/saifullah4khan/idempotency-keys"
+Issues = "https://github.com/saifullah4khan/idempotency-keys/issues"
+
+[tool.setuptools]
+packages = ["idempotency_keys"]
